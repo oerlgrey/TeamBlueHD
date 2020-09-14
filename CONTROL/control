@@ -1,0 +1,8 @@
+Package: enigma2-plugin-skins-teambluehd
+Version: 0.4
+Section: misc
+Priority: optional
+Architecture: all
+Maintainer: örlgrey
+Description: Skin for Enigma2
+Source:
