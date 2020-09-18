@@ -247,6 +247,10 @@
     <parameter name="SelectionListDescr" value="36,1,694,27" />
     <parameter name="SelectionListLock" value="3,5,20,20" />
 	<parameter name="SelectionListLockOff" value="3,5,20,20" />
+	<!-- ServiceInfo -->
+	<parameter name="ServiceInfo" value="6,1,320,27" />
+	<parameter name="ServiceInfoLeft" value="6,1,320,27" />
+	<parameter name="ServiceInfoRight" value="330,1,400,27" />
 	<!-- ConfigList -->
     <parameter name="ConfigListSeperator" value="400" />
 	<!-- Dreamexplorer -->
@@ -288,6 +292,7 @@
 	<alias name="SelectionList" font="Regular" size="22" height="30"/>
 	<alias name="Dreamexplorer" font="Regular" size="22" height="30"/>
 	<alias name="PlayList" font="Regular" size="22" height="30"/>
+	<alias name="ServiceInfo" font="Regular" size="22" height="30"/>
   </fonts>
 	
 	<screen name="Logo2">
@@ -1352,6 +1357,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
     <widget name="HelpWindow" position="900,346" size="261,262" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
+    <panel name="Colorbuttons"/>
 	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
     <panel name="OKExit"/>
@@ -3516,15 +3522,36 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="Exit"/>
   </screen>
 
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ExtraMessageBox" position="0,0" size="1280,720" title="">
+	<!--*ExtraMessageBox*-->
+	<widget backgroundColor="TBbg3" source="menu" render="Listbox" position="42,80" size="736,464" foregroundColor="TBFont1" selectionPixmap="TeamBlueHD/graphics/sel_60.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
+		<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (66, 15), size = (664, 27), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 58
+				}
+		</convert>
+	</widget>
+	<widget backgroundColor="TBbg3" name="message" position="42,585" size="736,27" font="Regular2;22" foregroundColor="TBFont2" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big"/>
+  	<panel name="Logo4"/>
+	<panel name="box2-menu"/>
+	<panel name="Colorbuttons"/>
+	<panel name="OKExit"/>
+  </screen>
+
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HddSetup" position="0,0" size="1280,720" title="Hard Drive Setup">
 	<!--*HddSetup*-->
     <eLabel backgroundColor="TBIBbg3" text="Device List" font="Regular2;34" foregroundColor="TBIBGFont2" position="42,7" size="736,46" transparent="1" halign="left" valign="center" />
-	<widget backgroundColor="TBbg3" source="menu" render="Listbox" position="42,79" size="736,812" itemHeight="58" selectionPixmap="TeamBlueHD/graphics/sel_60.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
+	<widget backgroundColor="TBbg3" source="menu" render="Listbox" position="42,80" size="736,522" itemHeight="58" selectionPixmap="TeamBlueHD/graphics/sel_60.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 	  <convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (58, 10), size = (508, 27), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (588, 10), size = (140, 27), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
+					MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (66, 15), size = (508, 27), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (590, 15), size = (140, 27), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
 					],
 					"fonts": [gFont("Regular", 22)],
 					"itemHeight": 58
@@ -3545,9 +3572,9 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="TBbg3" source="menu" render="Listbox" position="42,120" size="736,522" itemHeight="58" selectionPixmap="TeamBlueHD/graphics/sel_60.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 	  <convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (58, 10), size = (508, 27), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (588, 10), size = (140, 27), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
+					MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (66, 15), size = (508, 27), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (590, 15), size = (140, 27), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
 					],
 					"fonts": [gFont("Regular", 22)],
 					"itemHeight": 58
@@ -3583,7 +3610,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="TBbg3" name="readDisk" font="Regular;22" foregroundColor="TBFont1" position="42,260" size="736,27" halign="left" valign="center" transparent="1" />
 	<widget backgroundColor="TBbg3" name="readCache" font="Regular;22" foregroundColor="TBFont1" position="42,290" size="736,27" halign="left" valign="center" transparent="1" />
 	<widget backgroundColor="TBbg3" name="temp" font="Regular;22" foregroundColor="TBFont1" position="42,320" size="736,27" halign="left" valign="center" transparent="1" />
-	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,350" size="736,45" transparent="1" />
+	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,380" size="736,30" transparent="1" />
     <panel name="Title-big"/>
   	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
@@ -3820,15 +3847,19 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="OKExit"/>
   </screen>
 
-  <screen name="VirtualKeyBoard" position="center,196" backgroundColor="TBbg6" title="Virtual KeyBoard" flags="wfBorder" size="650,366" zPosition="99">
-    <widget backgroundColor="TBbg6" name="prompt" conditional="prompt" position="10,8" size="630,27" font="Regular;22" foregroundColor="TBFont2" transparent="1" noWrap="1" />
-    <eLabel backgroundColor="TBBorder" position="10,45" size="630,2" zPosition="-1" />
-    <eLabel backgroundColor="TBBorder" position="10,83" size="630,2" zPosition="-1" />
-    <eLabel backgroundColor="TBBorder" position="10,45" size="2,40" zPosition="-1" />
-    <eLabel backgroundColor="TBBorder" position="638,45" size="2,40" zPosition="-1" />
-    <widget backgroundColor="TBbg6" name="text" position="12,47" size="626,35" font="Regular;28" foregroundColor="TBFont1" valign="center" noWrap="1" transparent="1" />
-    <widget backgroundColor="#001E1E1E" name="list" position="10,94" size="630,225" selectionDisabled="1" foregroundColor="white" transparent="1" />
-    <widget backgroundColor="TBbg6" name="locale" conditional="locale" position="10,334" size="630,27" font="Regular;22" foregroundColor="TBFont1" transparent="1" noWrap="1" />
+  <screen name="VirtualKeyBoard" position="0,0" backgroundColor="transparent" title="Virtual KeyBoard" flags="wfNoBorder" size="1280,720" zPosition="99">
+	<!--*VirtualKeyBoard*-->
+	<ePixmap pixmap="TeamBlueHD/backg.png" position="0,0" size="1280,720" zPosition="-10" />
+	<ePixmap pixmap="TeamBlueHD/graphics/virtualkeyboard.png" position="285,128" size="710,464" zPosition="-9" alphatest="blend" />
+	<widget backgroundColor="TBbg6" source="Title" render="Label" position="325,152" size="630,34" font="Regular2;27" foregroundColor="TBFont2" transparent="1" noWrap="1" />
+    <widget backgroundColor="TBbg6" name="prompt" conditional="prompt" position="325,204" size="630,27" font="Regular;22" foregroundColor="TBFont2" transparent="1" noWrap="1" />
+    <eLabel backgroundColor="TBBorder" position="325,241" size="630,2" zPosition="-1" />
+    <eLabel backgroundColor="TBBorder" position="325,279" size="630,2" zPosition="-1" />
+    <eLabel backgroundColor="TBBorder" position="325,241" size="2,40" zPosition="-1" />
+    <eLabel backgroundColor="TBBorder" position="953,241" size="2,40" zPosition="-1" />
+    <widget backgroundColor="TBbg6" name="text" position="327,243" size="626,35" font="Regular;28" foregroundColor="TBFont1" valign="center" noWrap="1" transparent="1" />
+    <widget backgroundColor="#001E1E1E" name="list" position="325,290" size="630,225" selectionDisabled="1" foregroundColor="white" transparent="1" />
+    <widget backgroundColor="TBbg6" name="locale" conditional="locale" position="325,530" size="630,27" font="Regular;22" foregroundColor="TBFont1" transparent="1" noWrap="1" />
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Console" position="0,0" size="1280,720" title="Command execution...">
