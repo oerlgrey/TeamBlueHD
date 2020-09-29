@@ -58,7 +58,7 @@
     <color name="TBEMCSelFont" value="#00ffffff" />
     <color name="TBMarked" value="#0070AD11" />
     <color name="TBECM" value="#00ffffff" />
-	<color name="TBNotAvailable" value="#00FFEA04" />
+	<color name="TBNotAvailable" value="#00656565" />
     <color name="TBPrime" value="#0070AD11" />
     <color name="TBIBProgress" value="#00000000" />
     <color name="TBIBProgressBorderLine" value="#00ffffff" />
@@ -1354,8 +1354,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RemoteControlCode" position="0,0" size="1280,720" title="Position Setup">
 	<!--*RemoteControlCode*-->
-    <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,390" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,420" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="Logo4"/>
@@ -1392,7 +1392,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <eLabel backgroundColor="TBbg" position="0,0" size="70,70" zPosition="1" />
   </screen>
 
-  <screen backgroundColor="TBbg2" flags="wfNoBorder" name="NumericalTextInputHelpDialog" position="134,500" size="552,135" zPosition="98">
+  <screen backgroundColor="TBbg2" flags="wfNoBorder" name="NumericalTextInputHelpDialog" position="134,502" size="552,135" zPosition="98">
     <eLabel backgroundColor="TBBorder" position="0,0" size="552,2" transparent="0" zPosition="9" />
     <eLabel backgroundColor="TBBorder" position="0,0" size="2,135" transparent="0" zPosition="9" />
     <eLabel backgroundColor="TBBorder" position="550,0" size="2,135" transparent="0" zPosition="9" />
@@ -1642,7 +1642,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<!--*VideoEnhancementSetup*-->
     <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="42,80" size="736,360" transparent="1" />
     <widget backgroundColor="TBbg3" font="Regular2;22" halign="center" name="introduction" position="42,460" size="736,27" transparent="1" foregroundColor="TBFont2" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="Logo4"/>
@@ -1668,7 +1668,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget source="Gateway" render="Label" position="542,492" size="220,24" font="Regular;20" halign="right" foregroundColor="TBFont1" backgroundColor="TBbg3" transparent="1" />
     <widget source="DNS1" render="Label" position="542,522" size="220,24" font="Regular;20" halign="right" foregroundColor="TBFont1" backgroundColor="TBbg3" transparent="1" />
     <widget source="DNS2" render="Label" position="542,552" size="220,24" font="Regular;20" halign="right" foregroundColor="TBFont1" backgroundColor="TBbg3" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Colorbuttons"/>
     <widget font="Regular;20" halign="left" valign="center" source="key_red" position="47,670" size="220,26" render="Label" backgroundColor="TBIBbg3" foregroundColor="TBButton" transparent="1" zPosition="1" />
     <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="797,670" size="220,26" render="Label" backgroundColor="TBIBbg3" foregroundColor="TBButton" transparent="1" zPosition="1" />
@@ -1828,7 +1828,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
     <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,360" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="TBbg3" source="introduction" render="Label" font="Regular2;22" foregroundColor="TBFont2" halign="center" position="42,460" size="736,27" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
 	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
     <panel name="Colorbuttons"/>
@@ -1864,7 +1864,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big"/>
 	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,360" zPosition="1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget source="introduction" render="Label" position="42,460" size="736,27" zPosition="10" font="Regular2;22" foregroundColor="TBFont2" halign="center" valign="center" backgroundColor="TBbg3" transparent="1"/>
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Colorbuttons"/>
     <widget font="Regular;20" halign="left" valign="center" source="key_red" position="47,670" size="220,26" render="Label" backgroundColor="TBIBbg3" foregroundColor="TBButton" transparent="1" zPosition="1" />
 	<panel name="Logo4"/>
@@ -2504,7 +2504,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Setup" position="0,0" size="1280,720" title="Setup">
 	<!--*Setup*-->
     <widget backgroundColor="TBbg3" name="config" font="Regular;21" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,540" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="Logo4"/>
@@ -2541,8 +2541,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UpdatePlugin" position="0,0" size="1280,720" title="Software Update...">
 	<!--*UpdatePlugin*-->
     <widget name="activityslider" borderColor="TBBorder" borderWidth="2" position="42,80" size="736,15" transparent="1" foregroundColor="TBProgress" pixmap="TeamBlueHD/progress/progress736.png" />
-    <widget backgroundColor="TBbg3" font="Regular;20" foregroundColor="TBFont1" position="52,110" render="Label" size="716,25" source="package" transparent="1" />
-    <widget backgroundColor="TBbg3" font="Regular;20" foregroundColor="TBFont1" position="52,150" render="Label" size="716,50" source="status" transparent="1" />
+    <widget backgroundColor="TBbg3" font="Regular;22" foregroundColor="TBFont1" position="42,110" render="Label" size="736,27" source="package" transparent="1" />
+    <widget backgroundColor="TBbg3" font="Regular;22" foregroundColor="TBFont1" position="42,150" render="Label" size="736,54" source="status" transparent="1" />
     <widget name="slider" borderColor="TBBorder" borderWidth="2" position="42,240" size="736,15" transparent="1" foregroundColor="TBProgress" pixmap="TeamBlueHD/progress/progress736.png" />
     <panel name="Title-big"/>
 	<panel name="Logo4"/>
@@ -2680,7 +2680,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<!--*CrashlogAutoSubmitConfiguration*-->
     <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,360" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="TBbg3" font="Regular2;22" foregroundColor="TBFont2" halign="center" position="42,460" render="Label" size="736,27" source="status" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="Logo4"/>
@@ -2833,11 +2833,11 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen name="EditModemManual" position="0,0" size="1280,720" title="3G Modem Manager Config Edit" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*EditModemManual*-->
 	<panel name="title-small"/>
-	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" zPosition="2" position="42,80" size="736,390" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" zPosition="2" position="42,80" size="736,420" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="Colorbuttons"/>
     <panel name="SourceRedGreen"/>
     <widget font="Regular;20" halign="left" valign="center" source="key_blue" position="797,670" size="220,26" render="Label" backgroundColor="TBIBbg3" foregroundColor="TBButton" transparent="1" zPosition="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
 	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
     <panel name="OKExit"/>
@@ -3644,8 +3644,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="GBIpboxMenu" position="0,0" size="1280,720" title="GigaBlue IPBox Client">
 	<!--*GBIpboxMenu*-->
-	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,390" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-	<widget backgroundColor="TBbg3" name="description" font="Regular2;22" foregroundColor="TBFont2" position="42,480" size="736,135" halign="center" valign="center" transparent="1" />
+	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,450" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="TBbg3" source="text" render="Label" font="Regular2;22" foregroundColor="TBFont2" position="42,560" size="736,54" halign="center" valign="center" transparent="1" />
     <panel name="Title-big"/>
   	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
@@ -3668,7 +3668,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AudioSetup" position="0,0" size="1280,720" title="Setup">
 	<!--*AudioSetup*-->
 	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,540" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
   	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
@@ -3680,7 +3680,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="setup_subtitlesetup" position="0,0" size="1280,720" title="Setup">
 	<!--*setup_subtitlesetup*-->
 	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,540" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
   	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
@@ -3692,7 +3692,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="setup_autolanguagesetup" position="0,0" size="1280,720" title="Setup">
 	<!--*setup_autolanguagesetup*-->
 	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,540" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
   	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
@@ -3926,7 +3926,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<!--*NetworkPassword*-->
     <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,270" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="TBbg3" name="description" position="42,370" size="736,108" font="Regular2;22" foregroundColor="TBFont2" halign="center" valign="center" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
 	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
@@ -4069,8 +4069,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEntry" position="0,0" size="1280,720" title="Timer entry">
 	<!--*TimerEntry*-->
 	<eLabel text="Timer entry" position="42,7" size="736,46" backgroundColor="TBIBbg3" font="Regular2;34" foregroundColor="TBIBGFont2" halign="left" valign="center" transparent="1" />
-    <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,390" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,420" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <widget font="Regular;20" halign="left" valign="center" name="canceltext" position="47,670" size="220,26" backgroundColor="TBIBbg3" foregroundColor="TBButton" transparent="1" zPosition="1" />
     <widget font="Regular;20" halign="left" valign="center" name="oktext" position="297,670" size="220,26" backgroundColor="TBIBbg3" foregroundColor="TBButton" transparent="1" zPosition="1" />
     <panel name="Colorbuttons"/>
@@ -4552,8 +4552,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen name="FritzCallSetup" position="0,0" size="1280,720" flags="wfNoBorder" title="FritzCallSetup" backgroundColor="transparent">
 	<!--*FritzCallSetup*-->
 	<eLabel text="FritzCall Setup" position="42,7" size="736,46" backgroundColor="TBIBbg3" font="Regular2;34" foregroundColor="TBIBGFont2" halign="left" valign="center" transparent="1" />
-    <widget backgroundColor="TBbg3" name="consideration" position="42,80" size="736,90" font="Regular2;20" transparent="1" foregroundColor="TBFont2" />
-    <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,190" size="736,450" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,420" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="TBbg3" name="consideration" position="134,502" size="552,135" font="Regular2;22" foregroundColor="TBFont2" halign="center" valign="center" transparent="1" />
     <panel name="Colorbuttons"/>
 	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
@@ -5192,8 +5192,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerFilterEditor" position="0,0" size="1280,720" title="Edit AutoTimer Filters">
 	<!--*AutoTimerFilterEditor*-->
     <panel name="Title-big"/>
-	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,390" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,420" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
 	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
     <panel name="Colorbuttons"/>
@@ -6573,8 +6573,8 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 
   <screen name="MSNWeatherPluginEntryConfigScreen" position="0,0" size="1280,720" title="WeatherPlugin: Edit Entry" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*MSNWeatherPluginEntryConfigScreen*-->
-    <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,390" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-    <widget name="HelpWindow" position="134,500" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
+    <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,420" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget name="HelpWindow" position="134,502" size="552,135" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
 	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
