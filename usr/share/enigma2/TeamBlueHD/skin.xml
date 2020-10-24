@@ -1379,11 +1379,47 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<!--*SkinSelector*-->
     <widget backgroundColor="TBbg3" name="SkinList" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="42,80" size="348,420" transparent="1" />
     <widget alphatest="blend" name="Preview" position="428,70" size="280,210" />
-    <widget backgroundColor="TBbg3" font="Regular2;22" halign="center" position="42,545" render="Label" size="736,56" source="introduction" transparent="1" foregroundColor="TBFont2" />
+    <widget backgroundColor="TBbg3" font="Regular2;22" halign="center" position="42,545" render="Label" size="736,54" source="introduction" transparent="1" foregroundColor="TBFont2" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="LCDSkinSelectorOLD" position="0,0" size="1280,720" title="LCD Skin Selector">
+	<!--*LCDSkinSelectorOLD*-->
+	<widget backgroundColor="TBIBbg3" font="Regular2;34" foregroundColor="TBIBGFont2" position="42,7" render="Label" size="1000,46" source="lab1" transparent="1" halign="left" valign="center" noWrap="1" />
+    <widget backgroundColor="TBbg3" name="SkinList" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="42,80" size="348,420" transparent="1" />
+    <widget alphatest="blend" name="Preview" position="428,70" size="280,210" />
+    <widget backgroundColor="TBbg3" font="Regular2;22" halign="center" position="42,545" render="Label" size="736,54" source="lab3" transparent="1" foregroundColor="TBFont2" />
+    <panel name="Colorbuttons"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="LCDClockSelector" position="0,0" size="1280,720" title="LCD Clock Selector">
+	<!--*LCDClockSelector*-->
+	<widget backgroundColor="TBIBbg3" font="Regular2;34" foregroundColor="TBIBGFont2" position="42,7" render="Label" size="1000,46" source="lab1" transparent="1" halign="left" valign="center" noWrap="1" />
+    <widget backgroundColor="TBbg3" name="ClockList" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="42,80" size="348,420" transparent="1" />
+    <widget alphatest="blend" name="Preview" position="428,70" size="280,210" />
+    <widget backgroundColor="TBbg3" font="Regular2;22" halign="center" position="42,545" render="Label" size="736,54" source="lab3" transparent="1" foregroundColor="TBFont2" />
+    <panel name="Colorbuttons"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="AudioEffect" position="0,0" size="1280,720" title="Audio Effect Setup">
+	<!--*AudioEffect*-->
+    <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="42,80" size="736,420" transparent="1" />
+    <widget backgroundColor="TBbg3" font="Regular2;22" halign="center" position="42,545" render="Label" size="736,54" source="description" transparent="1" foregroundColor="TBFont2" />
+    <panel name="Title-big"/>
+    <panel name="Colorbuttons"/>
+    <panel name="SourceRedGreenYellow"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
     <panel name="OKExit"/>
   </screen>
 
