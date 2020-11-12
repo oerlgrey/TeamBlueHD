@@ -1,6 +1,17 @@
 #!/bin/sh
-if [ `wget -O - -q http://127.0.0.1/web/deviceinfo | grep "\(<\|</\)e2distroversion" | tr -d '\n' | sed "s/.*<e2distroversion>\(.*\)<\/e2distroversion>.*/\\1\n/"` = 'openatv' ]; then
-	echo "Image found: openATV ................... OK"
+if [ `wget -O - -q http://127.0.0.1/web/deviceinfo | grep "\(<\|</\)e2distroversion" | tr -d '\n' | sed "s/.*<e2distroversion>\(.*\)<\/e2distroversion>.*/\\1\n/"` = 'teamblue' ]; then
+	echo "Image found: teamBlue ............... OK"
+	echo "Skin for teamBlue activated successfully"
+elif [ `wget -O - -q http://127.0.0.1/web/deviceinfo | grep "\(<\|</\)e2distroversion" | tr -d '\n' | sed "s/.*<e2distroversion>\(.*\)<\/e2distroversion>.*/\\1\n/"` = 'openhdf' ]; then
+	echo "Image found: openHDF ............... OK"
+    cp /usr/share/enigma2/TeamBlueHD/openhdf.xml /usr/share/enigma2/TeamBlueHD/skin.xml
+	echo "Skin for openHDF activated successfully"
+elif [ `wget -O - -q http://127.0.0.1/web/deviceinfo | grep "\(<\|</\)e2distroversion" | tr -d '\n' | sed "s/.*<e2distroversion>\(.*\)<\/e2distroversion>.*/\\1\n/"` = 'openatv' ]; then
+	echo "Image found: openATV ............... OK"
     cp /usr/share/enigma2/TeamBlueHD/openatv.xml /usr/share/enigma2/TeamBlueHD/skin.xml
-	echo "skin.xml for openATV activated successfully"
+	echo "Skin for openATV activated successfully"
+else
+	echo "no supportet Image found ........ failed"
+	echo "fallback to teamBlue ................ OK"
+	echo "Skin for teamBlue activated successfully"
 fi
