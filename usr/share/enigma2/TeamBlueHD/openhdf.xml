@@ -712,6 +712,11 @@
 	  <eLabel position="0,150" size="1280,2" backgroundColor="TBIBLine" zPosition="-8" />
 	</screen>
 	
+	<screen name="box2-ibepg">
+      <ePixmap pixmap="TeamBlueHD/graphics/ibar7.png" position="0,100" size="1280,285" zPosition="-9" />
+	  <eLabel position="0,100" size="1280,2" backgroundColor="TBIBLine" zPosition="-8" />
+	</screen>
+	
 	<screen name="box2-ibev">
       <ePixmap pixmap="TeamBlueHD/graphics/ibaro4.png" position="0,0" size="1280,150" zPosition="-9" />
 	  <eLabel position="0,150" size="1280,2" backgroundColor="TBIBLine" zPosition="-8" />
@@ -2850,6 +2855,30 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="OKExit"/>
   </screen>
 
+  <screen name="NetworkMountsMenu" position="0,0" size="1280,720" title="Mounts Setup" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*NetworkMountsMenu*-->
+	<widget backgroundColor="TBbg3" name="menulist" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,450" zPosition="1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="TBbg3" source="introduction" render="Label" font="Regular2;22" foregroundColor="TBFont2" halign="center" position="42,585" size="736,27" transparent="1" />
+    <panel name="Title-big"/>
+    <panel name="Colorbuttons"/>
+	<panel name="Logo4"/>
+	<panel name="box2-menu"/>
+    <panel name="SourceRedGreenYellowBlue"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen name="NetworkMountsMenu" position="0,0" size="1280,720" title="Mounts Setup" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*NetworkMountsMenu*-->
+	<widget backgroundColor="TBbg3" name="menulist" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,450" zPosition="1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="TBbg3" source="introduction" render="Label" font="Regular2;22" foregroundColor="TBFont2" halign="center" position="42,585" size="736,27" transparent="1" />
+    <panel name="Title-big"/>
+    <panel name="Colorbuttons"/>
+	<panel name="Logo4"/>
+	<panel name="box2-menu"/>
+    <panel name="SourceRedGreenYellowBlue"/>
+    <panel name="OKExit"/>
+  </screen>
+
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoMountEdit" position="0,0" size="1280,720" title="MountEdit">
 	<!--*AutoMountEdit*-->
     <panel name="Title-big"/>
@@ -3889,6 +3918,30 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Colorbuttons"/>
     <panel name="SourceRedGreenYellowBlue2"/>
     <panel name="Background"/>
+	<panel name="box2-menu"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen name="HistoryZapSelector" position="0,0" size="1280,720" title="History Zap" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HistoryZapSelector*-->
+	<widget backgroundColor="TBbg" source="menu" render="Listbox" position="42,80" size="1196,540" foregroundColor="TBFont1" selectionPixmap="TeamBlueHD/graphics/sel_60.png" enableWrapAround="1" scrollbarMode="showNever" transparent="1">
+	  <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 10), size = (10, 24), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
+						MultiContentEntryText(pos = (90, 0), size = (300, 30), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2),
+						MultiContentEntryText(pos = (390, 3), size = (801, 24), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),
+						MultiContentEntryText(pos = (90, 30), size = (180, 22), font = 3, flags = RT_HALIGN_LEFT, text = 5),
+						MultiContentEntryText(pos = (390, 30), size = (801, 22), font = 3 ,flags = RT_HALIGN_LEFT, text = 4),
+						MultiContentEntryPixmapAlphaBlend(pos = (5, 15), size = (60, 35), png=6, flags = BT_SCALE)
+					],
+				 "fonts": [gFont("Regular", 24), gFont("Regular", 24), gFont("Regular", 18), gFont("Regular", 16)],
+				 "itemHeight": 60
+				}
+	  </convert>
+	</widget>
+    <panel name="Title-big2"/>
+    <panel name="Colorbuttons"/>
+	<panel name="Background"/>
 	<panel name="box2-menu"/>
     <panel name="OKExit"/>
   </screen>

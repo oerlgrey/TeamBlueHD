@@ -19,27 +19,12 @@ from enigma import iServiceInformation, iPlayableService
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Poll import Poll
-import os, gettext
 from Tools.Directories import fileExists
-from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
-from Components.Language import language
 
 if fileExists("/etc/enigma2/ci0.xml") or fileExists("/etc/enigma2/ci1.xml"):
 		CI = True
 else:
 		CI = False
-
-lang = language.getLanguage()
-os.environ["LANGUAGE"] = lang[:2]
-gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
-gettext.textdomain("enigma2")
-gettext.bindtextdomain("TeamBlueHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/TeamBlueHD/locale/"))
-
-def _(txt):
-	t = gettext.dgettext("TeamBlueHD", txt)
-	if t == txt:
-		t = gettext.gettext(txt)
-	return t
 
 class TeamBlueHDECMLine(Poll, Converter, object):
 

@@ -16,24 +16,9 @@
 #  please contact me at ochzoetna@gmail.com
 
 from Converter import Converter
-from os import statvfs, environ
+from os import statvfs
 from Components.Element import cached, ElementError
 from Poll import Poll
-from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
-from Components.Language import language
-import gettext
-
-lang = language.getLanguage()
-environ["LANGUAGE"] = lang[:2]
-gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
-gettext.textdomain("enigma2")
-gettext.bindtextdomain("TeamBlueHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/TeamBlueHD/locale/"))
-
-def _(txt):
-	t = gettext.dgettext("TeamBlueHD", txt)
-	if t == txt:
-		t = gettext.gettext(txt)
-	return t
 
 class TeamBlueHDDiskSpace(Poll, Converter, object):
     free = 0
@@ -100,7 +85,7 @@ class TeamBlueHDDiskSpace(Poll, Converter, object):
                     if total == 0:
                         total = 1
                     percentage = free * 100 / total
-                    return ('%s / %s (%d%%) ' + _('free')) % (self.bytes2human(free, 1), self.bytes2human(total, 1), percentage)
+                    return ('%s / %s (%d%%) ' + _('frei')) % (self.bytes2human(free, 1), self.bytes2human(total, 1), percentage)
                 except OSError:
                     return 'N/A'
 

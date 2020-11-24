@@ -17,22 +17,6 @@
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached
-from os import environ
-from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
-from Components.Language import language
-import gettext
-
-lang = language.getLanguage()
-environ["LANGUAGE"] = lang[:2]
-gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
-gettext.textdomain("enigma2")
-gettext.bindtextdomain("TeamBlueHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/TeamBlueHD/locale/"))
-
-def _(txt):
-	t = gettext.dgettext("TeamBlueHD", txt)
-	if t == txt:
-		t = gettext.gettext(txt)
-	return t
 
 class TeamBlueHDRemainingToText(Converter, object):
 	DEFAULT = 0
@@ -87,7 +71,7 @@ class TeamBlueHDRemainingToText(Converter, object):
 				return "%d" % (duration / 60)
 		elif self.type == self.REMAINING_MINUTES:
 			if remaining is not None:
-				return _('remaining: ') + "%d min" % (remaining / 60 + 1)
+				return _('noch ') + "%d min" % (remaining / 60 + 1)
 			else:
 				return "%d min" % (duration / 60)
 		elif self.type == self.DEFAULT:
