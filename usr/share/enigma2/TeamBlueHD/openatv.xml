@@ -3987,7 +3987,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NetworkMacSetup" position="0,0" size="1280,720" title=" ">
 	<!--*NetworkMacSetup*-->
     <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,120" transparent="1" />
-    <widget backgroundColor="TBbg3" font="Regular2;22" foregroundColor="TBFont2" halign="center" valign="center" position="42,485" render="Label" size="736,100" source="introduction" transparent="1" />
+    <widget backgroundColor="TBbg3" font="Regular2;22" foregroundColor="TBFont2" halign="center" valign="center" position="42,485" render="Label" size="736,108" source="introduction" transparent="1" />
     <panel name="Title-big"/>
 	<panel name="Logo4"/>
 	<panel name="box2-menu"/>
