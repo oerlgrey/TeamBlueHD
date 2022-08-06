@@ -2,7 +2,7 @@
 
 #  Remaining To Text Converter
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #
 #  This code is licensed under the Creative Commons 
@@ -71,7 +71,7 @@ class TeamBlueHDRemainingToText(Converter, object):
 				return "%d" % (duration / 60)
 		elif self.type == self.REMAINING_MINUTES:
 			if remaining is not None:
-				return _('noch ') + "%d min" % (remaining / 60 + 1)
+				return "noch %d min" % (remaining / 60 + 1)
 			else:
 				return "%d min" % (duration / 60)
 		elif self.type == self.DEFAULT:

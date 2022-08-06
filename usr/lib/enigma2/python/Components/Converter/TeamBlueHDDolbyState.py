@@ -2,7 +2,7 @@
 
 #  Dolby State Converter
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #
 #  This code is licensed under the Creative Commons 
@@ -17,17 +17,15 @@
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached
-from Poll import Poll
+from Components.Converter.Poll import Poll
 
 class TeamBlueHDDolbyState(Poll, Converter, object):
-
 	Dolby20 = 1
 	Dolby51 = 2
 	Dolby = 3
 	Dolby_off = 4
-	
+
 	def __init__(self, type):
-	
 		Converter.__init__(self, type)
 		Poll.__init__(self)
 
@@ -45,16 +43,14 @@ class TeamBlueHDDolbyState(Poll, Converter, object):
 
 	@cached
 	def getText(self):
-
 		return self.getDolby()
-		
+
 	text = property(getText)
 
 	@cached
 	def getBoolean(self):
-
 		dolby = self.getDolby()
-		
+
 		if self.type == self.Dolby20 and dolby == "2.0":
 			return True
 		if self.type == self.Dolby51 and dolby == "5.1":
@@ -68,7 +64,6 @@ class TeamBlueHDDolbyState(Poll, Converter, object):
 	boolean = property(getBoolean)
 
 	def getDolby(self):
-	
 		service = self.source.service
 
 		if service:
@@ -81,14 +76,14 @@ class TeamBlueHDDolbyState(Poll, Converter, object):
 					description = i.getDescription()
 					language = i.getLanguage()
 					info = description + language
-					
+
 					if "2.0" in info:
 						return "2.0"
 					if "5.1" in info:
 						return "5.1"
 					if "AC3" in info or "AC-3" in info or "DTS" in info or "AAC" in info or "Dolby" in info:
 						return "Dolby"
-	
+
 		return "NoDolby"
 
 	def changed(self, what):

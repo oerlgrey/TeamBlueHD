@@ -2,7 +2,7 @@
 
 #  Event Name Converter
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #
 #  This code is licensed under the Creative Commons 
@@ -50,7 +50,7 @@ class TeamBlueHDEventName(Converter, object):
 		event = self.source.event
 		if event is None:
 			return ""
-		
+
 		if self.type == self.NAME:
 			return event.getEventName()
 		elif self.type == self.SHORT_DESCRIPTION:
@@ -67,7 +67,7 @@ class TeamBlueHDEventName(Converter, object):
 			name = event.getEventName() or ""
 			desc = event.getShortDescription() or ""
 			if name == desc:
-			   desc = ""
+				desc = ""
 			if desc != "":
 				desc = desc + '\n\n'
 			desc = desc + event.getExtendedDescription() or ""
@@ -76,11 +76,11 @@ class TeamBlueHDEventName(Converter, object):
 			name = event.getEventName() or ""
 			desc = event.getShortDescription() or ""
 			if name == desc:
-			   desc = ""
+				desc = ""
 			if desc != "":
 				name = name + ' - ' + desc or ""
 			return name
 		elif self.type == self.ID:
 			return str(event.getEventId())
-		
+
 	text = property(getText)

@@ -2,7 +2,7 @@
 
 #  Clock To Text Converter
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #  Based on Clock To Text by Diamondear and plnick
 #
@@ -16,7 +16,7 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from Converter import Converter
+from Components.Converter.Converter import Converter
 from time import localtime, strftime
 from Components.Element import cached
 
@@ -31,10 +31,10 @@ class TeamBlueHDClockToText(Converter, object):
 	ANALOG_SEC = 7
 	ANALOG_MIN = 8
 	ANALOG_HOUR = 9
-	
+
 	# add: date, date as string, weekday, ... 
 	# (whatever you need!)
-	
+
 	def __init__(self, type):
 		Converter.__init__(self, type)
 		if type == "WithSeconds":
@@ -72,9 +72,9 @@ class TeamBlueHDClockToText(Converter, object):
 			return "%d:%02d" % (time / 3600, (time / 60) - ((time / 3600) * 60))
 		elif self.type == self.TIMESTAMP:
 			return str(time)
-		
+
 		t = localtime(time)
-		
+
 		if self.type == self.WITH_SECONDS:
 			return "%2d:%02d:%02d" % (t.tm_hour, t.tm_min, t.tm_sec)
 		elif self.type == self.DEFAULT:
@@ -84,33 +84,33 @@ class TeamBlueHDClockToText(Converter, object):
 			weekday_long = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 			month_long = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 			str_fmt_values = {
-						"%B" : month_long,
-						"%A" : weekday_long,
+						"%B": month_long,
+						"%A": weekday_long,
 					}
-			
+
 			for key in str_fmt_values:
 				for value in str_fmt_values[key]:
 					r_value = _(value)
 					if return_str.find(value) != -1:
 						return_str = return_str.replace(value, r_value)
 						break
-			
+
 			return return_str
-		
+
 		elif self.type == self.FORMAT:
 			weekday_long = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 			weekday_short = ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
 			month_long = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 			month_short = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 			str_fmt_values = {
-						"%B" : month_long,
-						"%b" : month_short,
-						"%A" : weekday_long,
-						"%a" : weekday_short,
+						"%B": month_long,
+						"%b": month_short,
+						"%A": weekday_long,
+						"%a": weekday_short,
 					}
-			
+
 			return_str = strftime(self.fmt_string, t)
-			
+
 			for key in str_fmt_values:
 				if self.fmt_string.find(key) != -1:
 					for value in str_fmt_values[key]:

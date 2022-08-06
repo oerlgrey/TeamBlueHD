@@ -2,7 +2,7 @@
 
 #  Pixmap Scaler Renderer
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #  Based on the work of shamann (see below)
 #
@@ -16,7 +16,7 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap
 
 class TeamBlueHDPixmapScaler(Renderer):
@@ -31,7 +31,7 @@ class TeamBlueHDPixmapScaler(Renderer):
 			if attrib == 'noscale':
 				self.scale = value
 			else:
-				attribs.append((attrib,value))
+				attribs.append((attrib, value))
 		self.skinAttributes = attribs
 		return Renderer.applySkin(self, desktop, parent)
 
@@ -43,7 +43,7 @@ class TeamBlueHDPixmapScaler(Renderer):
 	def changed(self, what):
 		if what[0] != self.CHANGED_CLEAR:
 			if self.instance:
-				pngname=self.source.text
+				pngname = self.source.text
 				if self.scale is '0':
 					self.instance.setScale(1)
 				self.instance.setPixmapFromFile(pngname)

@@ -2,7 +2,7 @@
 
 #  Event Time Converter
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #
 #  This code is licensed under the Creative Commons 
@@ -15,8 +15,8 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from Converter import Converter
-from Poll import Poll
+from Components.Converter.Converter import Converter
+from Components.Converter.Poll import Poll
 from time import time
 from Components.Element import cached, ElementError
 
@@ -59,7 +59,7 @@ class TeamBlueHDEventTime(Poll, Converter, object):
 		event = self.source.event
 		if event is None:
 			return None
-			
+
 		if self.type == self.STARTTIME:
 			return event.getBeginTime()
 		elif self.type == self.ENDTIME:
@@ -84,7 +84,6 @@ class TeamBlueHDEventTime(Poll, Converter, object):
 				return (duration, now - start_time)
 			else:
 				return (duration, None)
-				
 
 	@cached
 	def getValue(self):

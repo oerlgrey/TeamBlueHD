@@ -2,7 +2,7 @@
 
 #  Service Info EX Converter
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #  Based on Service Info EX by 2boom (see below)
 #
@@ -24,14 +24,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService
 from Components.config import config
 from Components.Element import cached
 
 stream_codec = {-1: ' ', 0: 'MPEG2', 1: 'AVC', 2: 'H263', 3: 'VC1', 4: 'MPEG4-VC', 5: 'VC1-SM', 6: 'MPEG1', 7: 'HEVC', 8: 'VP8', 9: 'VP9', 10: 'XVID', 11: 'N/A 11', 12: 'N/A 12', 13: 'DIVX 3', 14: 'DIVX 4', 15: 'DIVX 5', 16: 'AVS', 17: 'N/A 17', 18: 'VP6', 19: 'N/A 19', 20: 'N/A 20', 21: 'SPARK'}
-		
+
 WIDESCREEN = [3, 4, 7, 8, 0xB, 0xC, 0xF, 0x10]
 
 class TeamBlueHDServiceInfoEX(Poll, Converter, object):
@@ -206,7 +206,7 @@ class TeamBlueHDServiceInfoEX(Poll, Converter, object):
 
 	@cached
 	def getText(self):
-		self.stream = { 'apid':"N/A", 'vpid':"N/A", 'sid':"N/A", 'onid':"N/A", 'tsid':"N/A", 'prcpid':"N/A", 'caids':"FTA", 'pmtpid':"N/A", 'txtpid':"N/A", 'xres':" ", 'yres':" ", 'resolution':" " ,'videoinfo':" ", 'atype':" ", 'vtype':" ", 'avtype':" ", 'fps':" ", 'tbps':" ", 'vsize':" ",}
+		self.stream = { 'apid': "N/A", 'vpid': "N/A", 'sid': "N/A", 'onid': "N/A", 'tsid': "N/A", 'prcpid': "N/A", 'caids': "FTA", 'pmtpid': "N/A", 'txtpid': "N/A", 'xres': " ", 'yres': " ", 'resolution': " ", 'videoinfo': " ", 'atype': " ", 'vtype': " ", 'avtype': " ", 'fps': " ", 'tbps': " ", 'vsize': " ",}
 		streaminfo = ""
 		array_caids = []
 		service = self.source.service
@@ -239,11 +239,11 @@ class TeamBlueHDServiceInfoEX(Poll, Converter, object):
 			self.stream['xres'] = self.getServiceInfoString(info, iServiceInformation.sVideoWidth)
 		if self.getServiceInfoString(info, iServiceInformation.sVideoWidth) != "N/A" and self.getServiceInfoString(info, iServiceInformation.sVideoHeight) != "N/A":
 			self.stream['resolution'] = self.getServiceInfoString(info, iServiceInformation.sVideoWidth) + "x" + self.getServiceInfoString(info, iServiceInformation.sVideoHeight)
-		
+
 		audio = service.audioTracks()
 		if audio:
 			if audio.getCurrentTrack() > -1:
-				self.stream['atype'] = str(audio.getTrackInfo(audio.getCurrentTrack()).getDescription()).replace(",","")
+				self.stream['atype'] = str(audio.getTrackInfo(audio.getCurrentTrack()).getDescription()).replace(",", "")
 		self.stream['vtype'] = stream_codec[info.getInfo(iServiceInformation.sVideoType)]
 		self.stream['avtype'] = self.stream['vtype'] + '/' + self.stream['atype']
 		if self.getServiceInfoString(info, iServiceInformation.sFrameRate, lambda x: "%d" % ((x+500)/1000)) != "N/A":
@@ -254,13 +254,13 @@ class TeamBlueHDServiceInfoEX(Poll, Converter, object):
 		if self.tpdata:
 			self.stream['ttype'] = self.tpdata.get('tuner_type', '')
 			if self.stream['ttype'] == 'DVB-S' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 1:
+				if self.tpdata.get('system', 0) == 1:
 					self.stream['ttype'] = 'DVB-S2'
 			elif self.stream['ttype'] == 'DVB-C' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 1:
+				if self.tpdata.get('system', 0) == 1:
 					self.stream['ttype'] = 'DVB-C2'
 			elif self.stream['ttype'] == 'DVB-T' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 1:
+				if self.tpdata.get('system', 0) == 1:
 					self.stream['ttype'] = 'DVB-T2'
 		else:
 			self.stream['ttype'] = 'IP-TV'
@@ -310,7 +310,7 @@ class TeamBlueHDServiceInfoEX(Poll, Converter, object):
 		elif self.type == self.vsize:
 			streaminfo = self.stream['xres'] + 'x' + self.stream['yres'] + self.stream['fps']
 		elif self.type == self.videoinfo:
-			streaminfo = self.stream['vtype'] + ", " + self.stream['xres'] + 'x' + self.stream['yres'] + ", " +  self.stream['fps'] + " fps"
+			streaminfo = self.stream['vtype'] + ", " + self.stream['xres'] + 'x' + self.stream['yres'] + ", " + self.stream['fps'] + " fps"
 		elif self.type == self.format:
 			tmp = self.sfmt[:]
 			for param in tmp.split():
@@ -402,27 +402,27 @@ class TeamBlueHDServiceInfoEX(Poll, Converter, object):
 				return True
 		elif self.type == self.IS_SATELLITE_S:
 			if type == 'DVB-S' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 0:
+				if self.tpdata.get('system', 0) == 0:
 					return True
 		elif self.type == self.IS_SATELLITE_S2:
 			if type == 'DVB-S' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 1:
+				if self.tpdata.get('system', 0) == 1:
 					return True
 		elif self.type == self.IS_CABLE_C:
 			if type == 'DVB-C' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 0:
+				if self.tpdata.get('system', 0) == 0:
 					return True
 		elif self.type == self.IS_CABLE_C2:
 			if type == 'DVB-C' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 1:
+				if self.tpdata.get('system', 0) == 1:
 					return True
 		elif self.type == self.IS_TERRESTRIAL_T:
 			if type == 'DVB-T' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 0:
+				if self.tpdata.get('system', 0) == 0:
 					return True
 		elif self.type == self.IS_TERRESTRIAL_T2:
 			if type == 'DVB-T' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 1:
+				if self.tpdata.get('system', 0) == 1:
 					return True
 		return False
 	boolean = property(getBoolean)

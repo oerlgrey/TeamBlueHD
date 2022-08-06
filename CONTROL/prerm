@@ -41,9 +41,6 @@ fi
 if [ -f /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDDolbyIcon.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDDolbyIcon.pyo
 fi
-if [ -f /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDEmptyEpg.pyo ]; then
-    rm /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDEmptyEpg.pyo
-fi
 if [ -f /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDEmptyEpg3.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDEmptyEpg3.pyo
 fi
