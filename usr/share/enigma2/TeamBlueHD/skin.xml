@@ -7352,9 +7352,12 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 
   <screen name="HDFRadioScreenSaver" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*HDFRadioScreenSaver*-->
-	<widget backgroundColor="#00000000" name="cover" position="146,80" size="300,300" zPosition="1" />
-	<widget backgroundColor="#00000000" source="recording" render="Label" font="Regular;24" foregroundColor="#00ff0000" position="40,24" size="1200,30" halign="center" valign="center" transparent="1" />
+	<widget backgroundColor="#00000000" source="recording" render="Label" font="Regular;30" foregroundColor="#00ff0000" position="40,20" size="1200,50" halign="center" valign="center" transparent="1" />
 	<widget backgroundColor="#00000000" source="songtitle" render="Label" font="Regular;30" foregroundColor="#00ffffff" position="40,650" size="1200,50" noWrap="1" halign="center" valign="center" transparent="1" />
+	<widget backgroundColor="#00000000" name="cover" position="146,80" size="300,300" zPosition="1" />
+	<widget backgroundColor="#3f3f3f" name="background" position="670,80" size="594,560" zPosition="2" transparent="0" />
+	<widget backgroundColor="#3f3f3f" name="favorites" font="Regular;22" foregroundColor="#00ffffff" position="680,90" size="574,540" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="3" transparent="1"/>
+	<widget backgroundColor="#3f3f3f" name="stations" font="Regular;22" foregroundColor="#00ffffff" position="680,90" size="574,540" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="3" transparent="1"/>
 	<eLabel backgroundColor="#00000000" position="0,0" size="1280,720" transparent="0" zPosition="-1" />
   </screen>
 
@@ -7450,12 +7453,16 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     </widget>
 	<widget backgroundColor="TBbg2" name="statepixmap" pixmaps="TeamBlueHD/graphics/stop.png,TeamBlueHD/graphics/play.png,TeamBlueHD/graphics/pause.png" position="42,75" size="40,30" alphatest="blend" />
 	<widget backgroundColor="TBbg2" name="shuffle" pixmaps="TeamBlueHD/graphics/sorted.png,TeamBlueHD/graphics/shuffle.png" position="96,75" size="40,30" alphatest="blend" />
-	<eLabel backgroundColor="#3f3f3f" position="158,80" size="638,20" zPosition="1" />
-	<widget source="session.CurrentService" render="Progress" foregroundColor="TBFont2" position="158,80" size="638,20" zPosition="2" transparent="1">
+	<eLabel backgroundColor="#3f3f3f" position="158,80" size="620,20" zPosition="1" />
+	<widget source="session.CurrentService" render="Progress" foregroundColor="TBFont2" position="158,80" size="620,20" zPosition="2" transparent="1">
 	  <convert type="ServicePosition">Position</convert>
 	</widget>
-	<widget backgroundColor="TBbg2" source="session.CurrentService" render="Label" font="Regular;24" foregroundColor="TBFont1" position="814,75" size="110,30" valign="center" transparent="1">
+	<widget backgroundColor="TBbg2" source="session.CurrentService" render="Label" font="Regular;24" foregroundColor="TBFont1" position="780,75" size="80,30" halign="right" valign="center" transparent="1">
 	  <convert type="ServicePosition">Remaining</convert>
+	</widget>
+	<eLabel backgroundColor="TBbg2" text="/" font="Regular;24" foregroundColor="TBFont1" position="868,75" size="10,30" halign="center" valign="center" transparent="1" />
+	<widget backgroundColor="TBbg2" source="session.CurrentService" render="Label" font="Regular;24" foregroundColor="TBFont1" position="886,75" size="70,30" valign="center" transparent="1">
+	  <convert type="ServicePosition">Length</convert>
 	</widget>
 	<widget backgroundColor="TBbg2" source="artist" render="Label" font="Regular2;33" foregroundColor="TBFont2" position="42,118" size="860,42" noWrap="1" valign="top" transparent="1" />
 	<widget backgroundColor="TBbg2" source="songtitle" render="Label" font="Regular;30" foregroundColor="TBFont1" position="42,168" size="860,38" noWrap="1" valign="top" transparent="1" />
@@ -7468,7 +7475,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="TBbg2" name="playlistname" font="Regular2;24" foregroundColor="TBFont2" position="42,220" size="622,30" valign="center" transparent="1"/>
 	<widget backgroundColor="TBbg2" name="playlist" font="Regular;22" foregroundColor="TBFont1" position="42,254" size="622,360" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="TBbg2" name="quickmenu" font="Regular;22" foregroundColor="TBFont1" position="42,224" size="622,390" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
-	<widget backgroundColor="TBbg2" name="cover" position="938,80" size="300,300" />
+	<widget backgroundColor="TBbg2" name="cover" position="958,80" size="280,280" />
 	<widget backgroundColor="TBbg2" name="directoriTBName" font="Regular2;24" foregroundColor="TBFont2" position="700,370" size="210,30" valign="center" transparent="1"/>
 	<widget backgroundColor="TBbg2" name="recorddirs" font="Regular;22" foregroundColor="TBFont1" position="700,405" size="538,210" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="TBbg2" name="localdirs" font="Regular;22" foregroundColor="TBFont1" position="700,405" size="538,210" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
