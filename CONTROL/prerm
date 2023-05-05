@@ -56,3 +56,60 @@ fi
 if [ -f /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDSingleEpgList.pyo ]; then
     rm /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDSingleEpgList.pyo
 fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDClockToText.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDClockToText.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDDiskSpace.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDDiskSpace.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDDolbyState.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDDolbyState.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDECMLine.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDECMLine.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDEventName.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDEventName.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDEventTime.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDEventTime.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDFrontendInfo.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDFrontendInfo.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDMenuIconPath.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDMenuIconPath.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDMovieReference.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDMovieReference.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDRemainingToText.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDRemainingToText.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDServiceEndTime.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDServiceEndTime.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDServiceInfoEX.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDServiceInfoEX.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Converter/TeamBlueHDServiceName2.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Converter/TeamBlueHDServiceName2.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDDolbyIcon.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDDolbyIcon.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDEmptyEpg3.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDEmptyEpg3.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDPixmapScaler.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDPixmapScaler.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDRunningText.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDRunningText.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDServiceIcon.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDServiceIcon.pyc
+fi
+if [ -f /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDSingleEpgList.pyc ]; then
+    rm /usr/lib/enigma2/python/Components/Renderer/TeamBlueHDSingleEpgList.pyc
+fi

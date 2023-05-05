@@ -2429,7 +2429,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Satfinder" position="0,0" size="1280,720" title="Satfinder">
 	<!--*Satfinder*-->
-    <widget backgroundColor="TBbg3" font="Regular2;21" foregroundColor="TBFont2" halign="center" position="92,80" render="Label" size="600,22" source="Frontend" transparent="1" zPosition="2">
+    <widget backgroundColor="TBbg3" font="Regular2;21" foregroundColor="TBFont2" halign="center" position="196,80" render="Label" size="420,22" source="Frontend" transparent="1" zPosition="2">
       <convert type="FrontendInfo">SNRdB</convert>
     </widget>
     <eLabel backgroundColor="TBbg3" font="Regular2;21" foregroundColor="TBFont2" halign="right" name="snr" position="92,110" size="80,25" text="SNR:" transparent="1" />
@@ -2446,7 +2446,7 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <widget backgroundColor="TBbg3" font="Regular2;21" foregroundColor="TBFont2" position="640,145" render="Label" size="80,25" source="Frontend" transparent="1">
       <convert type="FrontendInfo">BER</convert>
     </widget>
-    <eLabel backgroundColor="TBbg3" font="Regular2;21" foregroundColor="TBFont2" halign="right" name="lock" position="92,185" size="80,25" text="Lock:" transparent="1" />
+    <eLabel backgroundColor="TBbg3" font="Regular2;21" foregroundColor="TBFont2" halign="right" name="lock" position="92,185" size="80,25" text=" Lock:" transparent="1" />
     <widget alphatest="blend" pixmap="TeamBlueHD/icons/lock_on.png" position="196,188" render="Pixmap" size="20,20" source="Frontend" zPosition="1">
       <convert type="FrontendInfo">LOCK</convert>
       <convert type="ConditionalShowHide" />
@@ -5172,6 +5172,50 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Exit"/>
   </screen>
 
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="YouTubeMain" position="0,0" size="1280,720" title="YouTube">
+	<!--*YouTubeMain*-->
+    <panel name="Title-big"/>
+	<widget backgroundColor="TBbg3" source="list" render="Listbox" foregroundColor="TBFont1" selectionPixmap="TeamBlueHD/graphics/sel_90.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" >
+	  <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos=(4, 9), size=(100, 72), png=2), # Thumbnail
+					MultiContentEntryText(pos=(120, 0), size=(600, 54), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=3), # Title
+					MultiContentEntryText(pos=(120, 54), size=(290, 34), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=4), # Views
+					MultiContentEntryText(pos=(420, 54), size=(300, 34), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=5), # Duration
+					],
+				"fonts": [gFont("Regular",22), gFont("Regular",18)],
+				"itemHeight": 90}
+	  </convert>
+	</widget>
+	<widget name="thumbnail" position="4,9" backgroundColor="TBbg3" itemHeight="90" transparent="1" alphatest="on" size="100,72" />
+    <panel name="Colorbuttons"/>
+    <panel name="SourceRedGreen"/>
+	<panel name="TeamBlueHD-Logo"/>
+	<panel name="box2-menu"/>
+    <panel name="MenuOKExit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="YouTubeSearch" position="0,0" size="1280,720" title="YouTubeSearch">
+	<!--*YouTubeSearch*-->
+    <panel name="Title-big"/>
+	<widget backgroundColor="TBbg3" source="list" render="Listbox" foregroundColor="TBFont1" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,360" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" >
+	  <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos=(10, 1), size=(710, 27), font=0, flags=RT_HALIGN_LEFT, text=0)
+				],
+				"fonts": [gFont("Regular",22)],
+				"itemHeight": 30}
+	  </convert>
+	</widget>
+	<widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,455" size="736,30" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="HelpWindow" position="42,502" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
+    <panel name="Colorbuttons"/>
+    <panel name="SourceRedGreenYellow"/>
+	<panel name="TeamBlueHD-Logo"/>
+	<panel name="box2-menu"/>
+    <panel name="OKExit"/>
+  </screen>
+
   <screen name="EPGImportConfig" position="0,0" size="1280,720" title="EPG Import Configuration" backgroundColor="transparent" flags="wfNoBorder">
 	<!--*EPGImportConfig*-->
     <panel name="Title-big"/>
@@ -5696,13 +5740,13 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 		</convert>
 	</widget>
     <widget name="thumb" position="852,80" zPosition="2" size="280,280" alphatest="blend" />
- 	<widget name="Bez_sort" position="852,434" size="100,27" font="Regular;20" foregroundColor="TBFont2" backgroundColor="TBbg" transparent="1" />
-    <widget name="key_sort" position="972,434" size="267,27" font="Regular;20" foregroundColor="TBFont1" backgroundColor="TBbg" transparent="1" noWrap="1"/>
-    <widget name="button_ok" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PictureCenterFS/skin/pictures/key_ok.png" position="852,469" size="35,25" zPosition="1" alphatest="blend" />
-    <widget name="key_ok" position="905,467" zPosition="1" size="334,30" font="Regular;20" foregroundColor="TBFont1" backgroundColor="TBbg" transparent="1" noWrap="1"/>
-    <widget name="button_0" pixmap="/usr/share/enigma2/skin_default/buttons/key_0.png" position="852,500" size="35,25" zPosition="1" alphatest="blend" />
-    <widget name="key_0" position="905,500" zPosition="1" size="334,30" font="Regular;20" foregroundColor="TBFont1" backgroundColor="TBbg" transparent="1" noWrap="1"/>
-    <widget name="button_epg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PictureCenterFS/skin/pictures/key_epg.png" position="852,536" size="35,25" zPosition="1" alphatest="blend" />
+ 	<widget name="Bez_sort" position="852,434" size="101,27" font="Regular2;20" foregroundColor="ESFont2" backgroundColor="ESbg" transparent="1" noWrap="1" />
+    <widget name="key_sort" position="972,434" size="267,27" font="Regular;20" foregroundColor="ESFont1" backgroundColor="ESbg" transparent="1" noWrap="1"/>
+    <widget name="button_ok" pixmap="EchoSat/buttons/key_ok.png" position="852,467" size="27,30" zPosition="1" alphatest="blend" />
+    <widget name="key_ok" position="902,468" zPosition="1" size="334,30" font="Regular;20" foregroundColor="ESFont1" backgroundColor="ESbg" transparent="1" noWrap="1"/>
+    <widget name="button_0" pixmap="EchoSat/buttons/key_0.png" position="852,500" size="27,30" zPosition="1" alphatest="blend" />
+    <widget name="key_0" position="902,501" zPosition="1" size="334,30" font="Regular;20" foregroundColor="ESFont1" backgroundColor="ESbg" transparent="1" noWrap="1"/>
+    <widget name="dats" position="852,534" size="380,27" font="Regular;20" foregroundColor="ESFont1" backgroundColor="ESbg" transparent="1" noWrap="1"/>
     <ePixmap alphatest="blend" pixmap="TeamBlueHD/buttons/key_red1.png" position="42,697" size="200,5" />
     <ePixmap alphatest="blend" pixmap="TeamBlueHD/buttons/key_green1.png" position="309,697" size="200,5" />
     <ePixmap alphatest="blend" pixmap="TeamBlueHD/buttons/key_yellow1.png" position="576,697" size="200,5" />
@@ -5736,6 +5780,31 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<panel name="box2-menu"/>
     <panel name="Colorbuttons"/>
     <panel name="NameRedGreenYellowBlue"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="PictureCenterFS7_Filemenu" position="0,0" size="1920,1080" title="PictureCenterFS">
+	<!--*PictureCenterFS7_Filemenu*-->
+	<eLabel text="PictureCenterFS" position="42,7" size="1000,46" backgroundColor="TBIBbg3" font="Regular2;34" foregroundColor="TBIBGFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="TBbg3" source="m_liste" render="Listbox" position="42,80" size="736,300" foregroundColor="TBFont1" selectionPixmap="TeamBlueHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
+	  <convert type="TemplatedMultiContent">
+				{"templates": 
+					{"default": (30, [
+					MultiContentEntryText(pos = (10, 1), size = (710, 28), font=0, flags = RT_HALIGN_LEFT, text = 0)
+					],True), 
+					"with_numpic": (30,[
+					MultiContentEntryPixmapAlphaTest(pos = (3, 3), size = (40, 30), png = 2), # index 5: stream-logo
+					MultiContentEntryText(pos = (50, 1), size = (670, 28), font=0, flags = RT_HALIGN_LEFT, text = 0)
+					],True)
+					}, 
+				"fonts": [gFont("Regular", 22)],"itemHeight": 30
+				}
+	  </convert>
+	</widget>
+    <widget name="thumb" position="279,400" zPosition="2" size="220,220" alphatest="blend" />
+	<panel name="TeamBlueHD-Logo"/>
+	<panel name="box2-menu"/>
+    <panel name="Colorbuttons"/>
     <panel name="OKExit"/>
   </screen>
 
@@ -6761,33 +6830,30 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="OKExit"/>
   </screen>
 
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="PiconsUpdaterView" position="0,0" size="1280,720" title=" ">
+  <screen name="PiconsUpdaterView" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*PiconsUpdaterView*-->
-    <eLabel backgroundColor="TBIBbg3" text="PiconsUpdater" font="Regular2;34" foregroundColor="TBIBGFont2" position="42,7" size="736,46" transparent="1" halign="left" valign="center" />
-    <widget backgroundColor="TBbg3" name="config" font="Regular;22" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" position="42,80" size="736,180" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-	<widget backgroundColor="transparent" name="backgroundImage" position="160,260" size="500,300" zPosition="1" alphatest="blend" transparent="1"/>
-	<widget backgroundColor="transparent" name="previewImage" position="185,275" size="450,270" zPosition="1" alphatest="blend" transparent="1"/>
-	<widget backgroundColor="transparent" name="foregroundImage" position="160,260" size="500,300" zPosition="1" alphatest="blend" transparent="1"/>
-	<eLabel backgroundColor="TBbg3" text="coded by svox, idea by arn354" position="42,575" size="736,27" font="Regular2;22" foregroundColor="TBFont2" halign="center" valign="center" zPosition="1" transparent="1"/>
+    <widget backgroundColor="TBbg3" name="config" font="Regular;21" secondfont="Regular;19" position="42,80" size="736,180" foregroundColor="TBFont1" itemHeight="30" selectionPixmap="TeamBlueHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="TBbg3" name="backgroundImage" position="235,275" size="350,210" zPosition="1" transparent="1" alphatest="blend" />
+	<widget backgroundColor="TBbg3" name="previewImage" position="252,285" size="315,189" zPosition="2" transparent="1" alphatest="blend" />
+	<widget backgroundColor="TBbg3" name="foregroundImage" position="235,275" size="350,210" zPosition="3" transparent="1" alphatest="blend" />
+	<eLabel backgroundColor="TBbg3" text="coded by svox, idea by arn354" font="Regular2;22" foregroundColor="TBFont2" halign="center" position="42,557" size="736,27" transparent="1" />
+    <widget name="HelpWindow" position="42,502" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
+	<eLabel backgroundColor="TBIBbg3" text="Cancel" position="47,670" size="240,26" font="Regular;20" foregroundColor="TBButton" transparent="1" />
+	<eLabel backgroundColor="TBIBbg3" text="Save" position="297,670" size="240,26" font="Regular;20" foregroundColor="TBButton" transparent="1" />
+	<eLabel backgroundColor="TBIBbg3" text="Download Picons" position="547,670" size="240,26" font="Regular;20" foregroundColor="TBButton" transparent="1" />
+    <ePixmap alphatest="blend" pixmap="TeamBlueHD/buttons/key_red1.png" position="42,697" size="200,5" />
+    <ePixmap alphatest="blend" pixmap="TeamBlueHD/buttons/key_green1.png" position="292,697" size="200,5" />
+    <ePixmap alphatest="blend" pixmap="TeamBlueHD/buttons/key_yellow1.png" position="542,697" size="200,5" />
+    <panel name="Title-big"/>
 	<panel name="TeamBlueHD-Logo"/>
 	<panel name="box2-menu"/>
-    <panel name="Colorbuttons"/>
-    <eLabel text="Cancel" position="47,670" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="TBIBbg3" foregroundColor="TBButton" transparent="1" />
-    <eLabel text="Save" position="297,670" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="TBIBbg3" foregroundColor="TBButton" transparent="1" />
-    <eLabel text="Download Picons" position="547,670" size="220,26" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="TBIBbg3" foregroundColor="TBButton" transparent="1" />
     <panel name="OKExit"/>
   </screen>
 
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="JobProgressView" position="0,0" size="1280,720" title="Job Progress">
-	<!--*JobProgressView*-->
-	<widget backgroundColor="TBbg3" source="titleText" render="Label" position="42,80" size="736,27" font="Regular;22" foregroundColor="TBFont1" zPosition="1" transparent="1" />
-    <widget name="downloadProgress" borderColor="TBBorder" borderWidth="3" position="42,120" size="736,15" transparent="1" foregroundColor="TBProgress" pixmap="TeamBlueHD/progress/progress736.png" />
-	<widget backgroundColor="TBbg3" source="downloadProgressText" render="Label" position="42,148" size="736,27" font="Regular;22" foregroundColor="TBFont1" zPosition="1" transparent="1" />
-	<panel name="TeamBlueHD-Logo"/>
-	<panel name="box2-menu"/>
-    <panel name="Title-big"/>
-    <panel name="Colorbuttons"/>
-    <panel name="OKExit"/>
+  <screen name="JobProgressView" position="center,318" size="440,122" title="Job Progress" backgroundColor="TBbg6">
+	<widget backgroundColor="TBbg6" source="titleText" render="Label" position="10,10" size="420,27" font="Regular;22" foregroundColor="TBFont1" transparent="1" />
+	<widget name="downloadProgress" position="10,53" size="420,15" borderWidth="1" foregroundColor="TBProgress" borderColor="TBFont1" transparent="1" />
+	<widget backgroundColor="TBbg6" source="downloadProgressText" render="Label" position="10,78" size="420,27" font="Regular;22" foregroundColor="TBFont1" transparent="1" />
   </screen>
 
   <screen name="Sett" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
@@ -6849,8 +6915,27 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapExt" position="264,216" size="714,243" title="QuickZap">
 	<widget name="chPicon" backgroundColor="TBbg" position="372,43" size="225,138" transparent="1" zPosition="1" alphatest="blend" />
-	<widget backgroundColor="TBbg" font="Regular; 80" foregroundColor="TBFont1" halign="center" name="chNum" position="67,72" size="200,100" transparent="0" zPosition="0" />
-	<widget backgroundColor="TBbg" font="Regular; 20" foregroundColor="TBFont1" halign="center" name="chName" noWrap="1" position="295,179" size="387,26" transparent="0" zPosition="0" />
+	<widget backgroundColor="TBbg" font="Regular;80" foregroundColor="TBFont1" halign="center" name="chNum" position="67,72" size="200,100" transparent="0" zPosition="0" />
+	<widget backgroundColor="TBbg" font="Regular;20" foregroundColor="TBFont1" halign="center" name="chName" noWrap="1" position="295,179" size="387,26" transparent="0" zPosition="0" />
+	<eLabel backgroundColor="TBbg" position="271,32" size="427,181" zPosition="-1" />
+	<eLabel backgroundColor="TBNZBorder" position="694,35" size="1,175" />
+	<eLabel backgroundColor="TBNZBorder" position="274,35" size="420,1" />
+	<eLabel backgroundColor="TBbg" position="46,46" size="225,154" zPosition="-1" />
+	<eLabel backgroundColor="TBNZBorder" position="49,49" size="1,147" />
+	<eLabel backgroundColor="TBNZBorder" position="49,49" size="235,1" />
+	<eLabel backgroundColor="TBNZBorder" position="284,49" size="1,147" />
+	<eLabel backgroundColor="TBNZBorder" position="49,195" size="235,1" />
+	<eLabel backgroundColor="TBNZBorder" position="274,209" size="420,1" />
+	<eLabel backgroundColor="TBNZBorder" position="274,196" size="1,14" />
+	<eLabel backgroundColor="TBNZBorder" position="274,35" size="1,14" />
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapPicon" position="264,216" size="714,243" title="QuickZap">
+	<widget alphatest="blend" render="Picon" position="372,43" size="225,138" source="Service" zPosition="1">
+	  <convert type="ServiceName">Reference</convert>
+	</widget>
+	<widget backgroundColor="TBbg" font="Regular;80" foregroundColor="TBFont1" halign="center" name="number" position="67,72" size="200,100" transparent="0" />
+	<widget backgroundColor="TBbg" font="Regular;20" foregroundColor="TBFont1" halign="center" name="servicename" noWrap="1" position="295,179" size="387,26" transparent="0" />
 	<eLabel backgroundColor="TBbg" position="271,32" size="427,181" zPosition="-1" />
 	<eLabel backgroundColor="TBNZBorder" position="694,35" size="1,175" />
 	<eLabel backgroundColor="TBNZBorder" position="274,35" size="420,1" />
