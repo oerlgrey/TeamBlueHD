@@ -73,7 +73,11 @@ class TeamBlueHDClockToText(Converter, object):
 		elif self.type == self.TIMESTAMP:
 			return str(time)
 
-		t = localtime(time)
+		# fix overflow error
+		try:
+			t = localtime(time)
+		except OverflowError:
+			return "n/a"
 
 		if self.type == self.WITH_SECONDS:
 			return "%2d:%02d:%02d" % (t.tm_hour, t.tm_min, t.tm_sec)
